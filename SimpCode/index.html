@@ -1,0 +1,69 @@
+<html> 
+	<head>
+		<title> I'm gonna Learn </title> 
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript">
+			function banner(){
+			var text = confirm("Did You Really Want to Click on My Banner?"); 
+			return text;
+		}
+			function answer(){
+			var radio = document.getElementsByName("trivia"); 
+			var selection = false; 
+			var message = "";
+			for( var i = 0; i < radio.length; i++) { 
+			if(radio[i].value == "p" && radio[i].checked == true) { 
+				selection = true; 
+				} //end if statement 
+				} //end for loop
+				if(selection == true) {
+					message = message + "<b><p style='color:green'>Way to go!</p></b>"; 
+					} else { 
+						message = message + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+						}
+					document.getElementById("response").innerHTML = message;} //end function answer
+		</script>	
+	</head> 
+	<body id="background">
+		<a href="http://google.com" onclick="return banner()"><header>Random Site Madness</header></a>
+		<nav>
+			<ul id="navmenu">
+				<li class="navitem"><a href="index.html">Home</a></li>
+				<li class="navitem"><a href="positions.html">Insane Stories</a></li>
+				<li class="navitem"><a href="aboutme.html">Less Interesting Stuff</a></li>
+			</ul>
+		</nav>
+		<h1>This is a header</h1>
+		<div id="rightside"><p>	This is a space for a <u>paragraph</u>. I'm <b>learning</b> from <i>simply coding</i> to become a <span class="wrap-text">professional</span>. </p></div>
+		<div id="leftside"><audio width="400" height="220" controls autoplay>
+				<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg"> Your browser does not support HTML 5 audio.
+		</audio>
+		<div class="wrap-list">
+			<ol>
+				<li class="listitem">overcome fear</li>
+				<li class="listitem">overcome obstacles</li>
+				<li class="listitem">make money</li> 
+			</ol> 
+		</div>
+		<div class="clearfloat"><h2>HTML Trivia</h2></div>
+		<div class="wrap-trivia">
+			<p class="paragraph">Wich letter is used for a paragraph tag?</p>
+			<form>
+				<div id="">
+				<input type="radio" name="trivia" value="p"> p <br>
+				<input type="radio" name="trivia" value="a"> a <br>
+				<input type="radio" name="trivia" value="v"> v <br>
+				<input type="radio" name="trivia" value="s"> s <br>
+				<input type="button" value="submit" id="button" onclick="answer()">
+			</form>
+			<video width="400" height="220" controls autoplay>
+			<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+			</video>
+		</div>
+		<img src="">
+		<img src="">
+		<hr>
+		<center><span class="wrap-text">Cary Barnhart</span><a href=""></a></center>
+		<footer>I Made This</footer>
+	</body> 
+</html>
